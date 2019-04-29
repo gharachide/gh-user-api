@@ -1,0 +1,25 @@
+# Spring Boot configuration
+spring:
+  profiles:
+    active: development
+# Database
+  datasource:
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+        ddl-auto: create-drop
+      properties:
+        hibernate:
+          show_sql: true
+          use_sql_comments: true
+          format_sql: true
+# Logging
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    com.gharachide: INFO
+    org.springframework: INFO
+# Server configuration
+server:
+  port: 8080
